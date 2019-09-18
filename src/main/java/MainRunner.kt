@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
     }
 
     val builder = JDABuilder(args[0])
-    builder.setDisabledCacheFlags(EnumSet.of(CacheFlag.ACTIVITY, CacheFlag.VOICE_STATE))
+    builder.setDisabledCacheFlags(EnumSet.of(CacheFlag.ACTIVITY))
     builder.setBulkDeleteSplittingEnabled(false)
     builder.setActivity(Activity.watching("Boss Schedule"))
     builder.addEventListeners(ReadyListener(), MessageListener())
